@@ -1,5 +1,7 @@
 package telran.util;
 
+import java.util.NoSuchElementException;
+
 public abstract class AbstractSet<T> implements Set<T> {
 
 	protected int size;
@@ -9,5 +11,12 @@ public abstract class AbstractSet<T> implements Set<T> {
 		
 		return size;
 	}
-
+	
+	protected void noSuchElementException() {
+		throw new NoSuchElementException();
+	}
+	
+	protected void illegalStateException() {
+		throw new IllegalStateException();
+	}
 }
